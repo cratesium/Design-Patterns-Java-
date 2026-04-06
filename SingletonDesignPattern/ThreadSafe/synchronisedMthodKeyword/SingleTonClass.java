@@ -1,4 +1,4 @@
-package SingletonDesignPattern;
+package SingletonDesignPattern.ThreadSafe.synchronisedMthodKeyword;
 
 public class SingleTonClass {
     String name ;
@@ -21,7 +21,7 @@ public class SingleTonClass {
      * @return
     */
 
-    public static SingleTonClass getSingleTonClassObject(){
+    public static synchronized SingleTonClass getSingleTonClassObject(){
 
         if (singleTonClassObj==null) {
 

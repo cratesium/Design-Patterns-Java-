@@ -1,4 +1,5 @@
-package SingletonDesignPattern;
+package SingletonDesignPattern.NotThreadSafeButfast;
+
 
 public class Caller {
 
@@ -35,8 +36,8 @@ public class Caller {
 
             /// EAGER WAY OF CREATING with v2 : created at class load time - object gets created , may be used , may not be , may reduce the performacne 
             
-            SingleTonClassV2 firstObject = SingleTonClassV2.getObject();
-            SingleTonClassV2 secondObject =SingleTonClassV2.getObject();
+            SingleTonClassV2NotThreadSafe firstObject = SingleTonClassV2NotThreadSafe.getObject();
+            SingleTonClassV2NotThreadSafe secondObject = SingleTonClassV2NotThreadSafe.getObject();
 
             System.out.println(firstObject.hashCode());
             System.out.println(secondObject.hashCode());
@@ -46,6 +47,8 @@ public class Caller {
         
             }
             
+
+
 
 
         }catch(Exception e){
