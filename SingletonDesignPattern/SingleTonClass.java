@@ -15,6 +15,12 @@ public class SingleTonClass {
 
     }
 
+    /**
+     * 
+     * LAZY INITIALZATION wont get called until the client call getSingleTonClassObject()
+     * @return
+    */
+
     public static SingleTonClass getSingleTonClassObject(){
 
         if (singleTonClassObj==null) {
