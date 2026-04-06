@@ -21,6 +21,11 @@ public class Caller {
             System.out.println(singleTonClassObjectCreationThiordTry.name);
 
 
+            //either compare the hash code 
+            System.out.println(singleTonClassObjectCreationSecondTry.hashCode());
+            System.out.println(singleTonClassObjectCreationThiordTry.hashCode());
+
+
         }catch(Exception e){
            System.out.println(e);
         }
@@ -38,6 +43,6 @@ Hiii Lets starts singlton class object creation
 Shikhar
 --------------->>>>>>> sepeartion bw both object <<<<<<<<--------------
 Shikhar
-
-
+622488023
+622488023
  */
