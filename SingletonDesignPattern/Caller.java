@@ -27,3 +27,17 @@ public class Caller {
     }
     
 }
+
+
+/**
+ * 
+ * 
+ Output : 
+ * 
+Hiii Lets starts singlton class object creation 
+Shikhar
+--------------->>>>>>> sepeartion bw both object <<<<<<<<--------------
+Shikhar
+
+
+ */
