@@ -24,11 +24,6 @@ public class SingleTonClass {
     public static  SingleTonClass getSingleTonClassObject(){
 
         if (singleTonClassObj==null) {
-
-
-            ..
-
-
             if (singleTonClassObj==null) {
                synchronized (SingleTonClass.class) {
                 singleTonClassObj= new SingleTonClass();
