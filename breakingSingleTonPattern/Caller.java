@@ -31,7 +31,7 @@ public class Caller {
 
 
              Constructor<SingletonClass> constructor = SingletonClass.class.getDeclaredConstructor();
-             constructor.setAccessible(true);
+             constructor.setAccessible(true); // this helps us make the private constructor accessible
              SingletonClass forcedObject = constructor.newInstance();
              System.out.println(forcedObject.hashCode());
 
