@@ -40,6 +40,15 @@ public class Caller {
 
 
 
+           /**
+            *
+            * To avoid the breaking we will throw the run time exception in the constructor with lazy loading
+            *
+            * in case if object already exists and we are trying to create the another instance
+            * */
+
+
+
        }
        catch (Exception e ){
            System.out.println(e);
