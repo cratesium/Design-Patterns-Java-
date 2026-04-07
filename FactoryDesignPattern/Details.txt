@@ -1,0 +1,17 @@
+Factory Design Pattern
+
+The Factory Design Pattern is a creational design pattern that provides an abstraction for creating objects. Instead of instantiating objects directly using constructors, the creation logic is delegated to a factory method or a factory class. This helps in hiding the complexity of object creation and promotes loose coupling between the client and the implementation classes.
+
+The main idea behind the factory pattern is to define an interface or abstract class for creating objects, while allowing subclasses or a separate factory component to decide which concrete class to instantiate. This way, the client code interacts only with the abstraction and does not need to know the exact class being used.
+
+One of the key benefits of the factory pattern is decoupling. Since the client code does not directly depend on concrete classes, changes in implementation do not affect the client. This makes the system easier to maintain and extend. It also improves code readability by centralizing object creation logic in one place.
+
+Another advantage is flexibility. New types of objects can be introduced without modifying existing client code. This aligns with the Open/Closed Principle, which states that software entities should be open for extension but closed for modification.
+
+There are different variations of the factory pattern. A simple factory uses a single method to create objects based on input parameters. The Factory Method pattern relies on inheritance, where subclasses override a method to create specific objects. The Abstract Factory pattern goes a step further by providing an interface to create families of related objects without specifying their concrete classes.
+
+The factory pattern is commonly used in scenarios where object creation is complex, requires configuration, or depends on runtime conditions. It is also useful when working with frameworks, dependency injection systems, and large-scale applications where flexibility and scalability are important.
+
+However, the pattern also has some drawbacks. It can increase the number of classes in the system, making the design more complex. For simple use cases, using a factory may be unnecessary and can lead to over-engineering.
+
+In summary, the Factory Design Pattern helps in managing object creation in a clean and flexible way. It promotes loose coupling, improves maintainability, and supports scalability, making it a widely used pattern in modern software development.
