@@ -21,9 +21,12 @@ public class SingleTonClass {
      * @return
     */
 
-    public static synchronized SingleTonClass getSingleTonClassObject(){
+    public static  SingleTonClass getSingleTonClassObject(){
 
         if (singleTonClassObj==null) {
+
+
+            ..
 
 
             if (singleTonClassObj==null) {
