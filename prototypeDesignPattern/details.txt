@@ -1,0 +1,185 @@
+Here’s a **clean and clear explanation of the Prototype Design Pattern** 👇
+
+---
+
+# 🧬 Prototype Design Pattern
+
+## 📌 Definition
+
+> The **Prototype Pattern** is a creational design pattern that creates new objects by **copying (cloning) an existing object**, instead of creating from scratch.
+
+---
+
+## 🧠 Why Use Prototype?
+
+Use it when:
+
+* Object creation is **expensive or complex**
+* You want to **avoid rebuilding objects again and again**
+* You need **many similar objects with slight changes**
+
+---
+
+## 🧱 Key Idea
+
+> Instead of `new`, you use **clone()**
+
+---
+
+## 📦 Simple Example
+
+### Without Prototype ❌
+
+```java
+User u1 = new User("John", 25);
+// Creating again from scratch
+User u2 = new User("John", 25);
+```
+
+---
+
+### With Prototype ✅
+
+```java
+User u1 = new User("John", 25);
+User u2 = u1.clone(); // copy
+```
+
+---
+
+## 💻 Java Example
+
+```java id="proto1"
+class User implements Cloneable {
+    String name;
+    int age;
+
+    User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public User clone() {
+        try {
+            return (User) super.clone();
+        } catch (CloneNotSupportedException e) {
+            return null;
+        }
+    }
+}
+```
+
+---
+
+### ▶️ Usage
+
+```java id="proto2"
+public class Main {
+    public static void main(String[] args) {
+
+        User u1 = new User("John", 25);
+        User u2 = u1.clone();
+
+        System.out.println(u1);
+        System.out.println(u2);
+    }
+}
+```
+
+---
+
+## 🔍 How It Works
+
+1. Create an object (prototype)
+2. Call `clone()`
+3. New object is created with same values
+
+---
+
+## ⚠️ Shallow vs Deep Copy
+
+### 🔹 Shallow Copy
+
+* Copies **reference**
+* Changes affect both objects
+
+### 🔹 Deep Copy
+
+* Copies **actual data**
+* Fully independent objects
+
+---
+
+## 📦 Example
+
+```java id="proto3"
+class Address {
+    String city;
+}
+
+class User implements Cloneable {
+    String name;
+    Address address;
+
+    public User clone() throws CloneNotSupportedException {
+        return (User) super.clone(); // shallow copy
+    }
+}
+```
+
+👉 Both users share same `address` object ❗
+
+---
+
+## ✅ Advantages
+
+* ✔ Faster than creating from scratch
+* ✔ Reduces object creation cost
+* ✔ Easy to create variations
+
+---
+
+## ❌ Disadvantages
+
+* ❌ Cloning can be tricky (deep copy issues)
+* ❌ Requires implementing `Cloneable`
+* ❌ Not always intuitive
+
+---
+
+## 🧩 Real-World Examples
+
+* Copying configurations
+* Game objects (cloning characters)
+* Document templates
+* Caching objects
+
+---
+
+## 🆚 Prototype vs Builder
+
+| Feature  | Prototype            | Builder            |
+| -------- | -------------------- | ------------------ |
+| Creation | Copy existing object | Build step-by-step |
+| Use case | Similar objects      | Complex objects    |
+| Speed    | Fast                 | Slower             |
+
+---
+
+## 🎯 Summary
+
+> Prototype Pattern = **Create object by cloning existing object**
+
+---
+
+## 🧠 Memory Trick
+
+> **Prototype = Copy-Paste Object**
+
+---
+
+If you want next, I can:
+
+* 🔥 Give **deep copy implementation (interview favorite)**
+* 🧠 Show **real-world system design usage**
+* ⚡ Compare **Prototype vs Factory vs Builder**

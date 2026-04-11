@@ -24,6 +24,8 @@ public class SingleTonClassV2 {
        // no synchronization is needed as the object is created at class load time and there is no chance of multiple threads creating multiple objects
 
 
+       
+
     public static synchronized SingleTonClassV2 getObject(){
         return SingleTonClassV2;
     }
