@@ -3,11 +3,11 @@ package ShallowAndDeepCopyPattern;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class MainShallowCopy {
 
     public static void main(String[] args) {
 
-        Servers server1 = new Servers();
+        ServersShallowCopy server1 = new ServersShallowCopy();
 
         System.out.println("Initializing Server 1 properties");
 
@@ -30,11 +30,11 @@ public class Main {
         System.out.println("End Server 1 properties");
         System.out.println("Server1: " + server1);
 
-        Servers server2 = null;
+        ServersShallowCopy server2 = null;
 
         try {
             System.out.println("\nInitializing Server 2 using CLONE");
-            server2 = (Servers) server1.clone();
+            server2 = (ServersShallowCopy) server1.clone();
             System.out.println("Server2: " + server2);
 
         } catch (CloneNotSupportedException e) {

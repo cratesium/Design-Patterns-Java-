@@ -1,9 +1,8 @@
 package ShallowAndDeepCopyPattern;
 
-import java.util.List;
 import java.util.Map;
 
-public class Servers  implements  Cloneable{
+public class ServersShallowCopy implements  Cloneable{
     Map<String,String> dnsBook;
     Map<String,String> knownhosts;
     String servername ;
